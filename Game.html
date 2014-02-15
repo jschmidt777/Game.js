@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <title>Space</title>
+      <script type="text/javascript" src="Game.js"></script>
+      <style type="text/css">
+      #planetmap { position:absolute; 
+                  right:27%; 
+                  top:5%; 
+                  width:20%; 
+                  height:600px;
+                  width:600px;
+                   }
+      #northOrientation { position:absolute; 
+                  right:10%; 
+                  top:10%; 
+                  width:20%; 
+                  height:600px;
+                  width:160px;
+                   }
+          </style>
+   </head>
+   <body onload="updateDisplay();">      
+      
+      <h2>Solar Sysdoom V2.0</h2>
+      Your score is:
+      <div id="scoreDisplay"> 
+	  </div>
+	  
+	 
+      <textarea id="taDisplay" style="width:450px; height:500px;">
+      </textarea> 
+      <br>
+      <input type="button"
+             value = "North"
+			 id = "Nbttn"
+             onclick="go('N');">
+      <input type="button"
+             value = "South"
+			 id = "Sbttn"
+             onclick="go('S');">
+      <input type="button"
+             value = "East"
+			 id = "Ebttn"
+             onclick="go('E');">
+      <input type="button"
+             value = "West"
+			 id = "Wbttn"
+             onclick="go('W');"> <br><br>
+      Command Inputs (n=north, s=south, e=east, w=west, i=inventory, h=help, d=dance, t=take) : <br>
+      <input type="textbox" id="commandBox" onkeyup="if (event.keyCode == 13) document.getElementById('go').click()">      
+      <input type="button"
+             value = "Go"
+			 id = "go"
+             onclick="commandInput();"> <br>
+	  
+	  
+   <img src="spacemap.jpg" id="planetmap">
+   <img src="north_arrow.png" id="northOrientation">
+      
+      <center>
+      <p><em><b>The arrows show the possible path of travel.</b></em><p> 
+      </center>                            
+   </body>
+</html>
