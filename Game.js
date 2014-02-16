@@ -216,37 +216,41 @@
                         updateMessage("Your inventory: " + inventory);
                         return;
                     
-                    }else if(movement== 't' && checkTake=== 2){
+                    }else if(movement== 't' && checkTake=== 2 && loc2.hasItem != false){
                     
                         updateMessage("You took the piece.");
                         inventory[0]= item2.name;
                         loc2.hasItem = false;
                         return;
                     
-                    }else if(movement== 't' && checkTake=== 5){
+                    }else if(movement== 't' && checkTake=== 5 && loc5.hasItem != false){
                     
                         updateMessage("You took the piece.");
                         inventory[1]= item5.name;
                         loc5.hasItem = false;
                         return;
                     
-                    }else if(movement== 't' && checkTake=== 6){
+                    }else if(movement== 't' && checkTake=== 6 && loc6.hasItem != false){
                     
                         updateMessage("You took the piece.");
                         inventory[2]= item6.name;
                         loc6.hasItem = false;
                         return; 
                         
-                    }else if(movement== 't' && checkTake=== 7){
+                    }else if(movement== 't' && checkTake=== 7 && loc7.hasItem != false){
                     
                         updateMessage("You took the piece.");
                         inventory[3]= item7.name;
                         loc7.hasItem = false;
                         return;
                     
-                    }else if(movement== 't'){
+                    }else if( movement== 't' && this.hasItem != true){
                     
-                        updateMessage("You took nothing.");
+                        updateMessage("You took nothing. You already got the piece here or there isn't one here.");
+                        return;
+                    }else if( movement== '' ){
+                    
+                        updateMessage("Please enter a command.");
                         return;
                     
                     }else if (movement== 'n'){
